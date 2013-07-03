@@ -93,9 +93,9 @@ header {
 }
 
 .carousel {
-  height:400px;
   background-color:#DDD;
   margin-bottom:0;
+  padding-bottom:70px;
   h2 {
     margin-top:50px;
     font-size:54px;
@@ -120,7 +120,7 @@ header {
     margin:0 auto;
     width:170px;
     height:170px;
-    border-radius:170px;
+    border-radius:50px;
     background:#CCC;
   }
   h3 {
