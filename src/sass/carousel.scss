@@ -1,0 +1,19 @@
+.carousel {
+  background-color:#DDD;
+  margin-bottom:0;
+  padding-bottom:70px;
+  h2 {
+    margin-top:50px;
+    font-size:54px;
+    font-weight:300;
+    line-height:65px;
+  }
+  .download-button {
+    display:block;
+    width:400px;
+    height:103px;
+    background:url(../img/download-button.png) no-repeat;
+    background-size:cover;
+    margin-top:40px;
+  }
+}
