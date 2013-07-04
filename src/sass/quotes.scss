@@ -1,0 +1,73 @@
+.quotes {
+  margin:60px auto 45px auto;
+  .container {
+    width:1080px;
+  }
+  .stars {
+    color:$red2;
+    font-family: sans-serif;
+    font-size: 20px;
+    span:before {
+      content: "\2605";
+       position: absolute;
+    }
+    margin-bottom:7px;
+  }
+  .quote-margin {
+  }
+  .quote-title {
+    background:url(../img/quotes.png) no-repeat;
+    background-size:contain;
+    min-height:170px;
+  }
+  .quote {
+    position:relative;
+    background-color:#F4F4F4;
+    padding:15px 12px 15px 15px;
+    min-height:140px;
+    font-size:17px;
+    line-height:23px;
+    margin-bottom:20px;
+    color:#7B7B7B;
+    .fold {
+      width:30px;
+      height:60px;
+      position: absolute;
+      top:0;
+      right:0;
+      background:url(../img/fold.png) no-repeat;
+      background-size:cover;
+    }
+    &.full {
+      height:330px;
+      p {
+        margin-top:50px;
+      }
+    }
+    > span {
+      position:absolute;
+      bottom:15px;
+      color:#323232;
+      font-size:13px;
+      font-weight:400;
+    }
+    &.alt {
+      p {
+        font-size:26px;
+        margin-top:15px;
+        font-weight: bold;
+      }
+      background-color:#FC3A43;
+      color:#FFF;
+      > span {
+        color:#FFF;
+      }
+      .stars {
+        font-size: 28px;
+        span:before {
+          color:#9E121B;
+        }
+      }
+    }
+  }
+}

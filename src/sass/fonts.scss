@@ -1,10 +1,13 @@
+// fonts.scss
+
 @font-face {
   font-family: 'Benton Sans';
   src: url('fonts/BentonSans-Medium.eot');
-  src: local("☺"), url('fonts/BentonSans-Medium.woff') format("woff"), url('fonts/BentonSans-Medium.ttf') format("truetype"), url('fonts/BentonSans-Medium.svg') format("svg");
+  src: local("☺"), url('fonts/BentonSans-Medium.woff') format('woff'), url('fonts/BentonSans-Medium.ttf') format('truetype'), url('fonts/BentonSans-Medium.svg') format('svg');
   font-weight:bold;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Benton Sans';
   src: url('fonts/BentonSans-Light.eot');
@@ -12,6 +15,7 @@
   font-weight: 300;
   font-style: normal;
 }
+
 @font-face {
   font-family: 'Proxima Nova';
   src: url('fonts/ProximaNova-Bold.eot');
