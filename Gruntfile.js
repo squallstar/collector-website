@@ -12,6 +12,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-replace');
   
   grunt.initConfig({
 
@@ -40,7 +41,7 @@ module.exports = function(grunt) {
     copy: {
       build: {
         files: [
-          {expand: true, cwd: 'src/', src: ['index.html', 'favicon.ico'], dest: 'build/'},
+          {expand: true, cwd: 'src/', src: ['favicon.ico'], dest: 'build/'},
           {expand: true, cwd: 'src/fonts/', src: ['**'], dest: 'build/css/fonts/'},
           {expand: true, cwd: 'src/img/', src: ['**'], dest: 'build/img/'}
         ]
@@ -50,6 +51,19 @@ module.exports = function(grunt) {
       deploy: {
         files: [
           {expand: true, cwd: 'build/', src: ['**'], dest: '/some/path/'}
+        ]
+      }
+    },
+
+    replace: {
+      dist: {
+        options: {
+          variables: {
+            'timestamp': '<%= new Date().getTime() %>'
+          }
+        },
+        files: [
+          {src: ['src/index.html'], dest: 'build/index.html'}
         ]
       }
     },
@@ -100,6 +114,7 @@ module.exports = function(grunt) {
     'copy:build',
     'sass:development',
     'concat',
+    'replace',
     'clean:post_build'
   ]);
 
@@ -108,6 +123,7 @@ module.exports = function(grunt) {
     'copy:build',
     'sass:release',
     'concat',
+    'replace',
     'clean:post_build',
     'uglify:release'
   ]);
