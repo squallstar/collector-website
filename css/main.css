@@ -76,9 +76,9 @@ header {
           text-decoration: none; }
 
 .carousel {
-  height: 400px;
   background-color: #DDD;
-  margin-bottom: 0; }
+  margin-bottom: 0;
+  padding-bottom: 70px; }
   .carousel h2 {
     margin-top: 50px;
     font-size: 54px;
@@ -100,7 +100,7 @@ header {
     margin: 0 auto;
     width: 170px;
     height: 170px;
-    border-radius: 170px;
+    border-radius: 50px;
     background: #CCC; }
   .features h3 {
     font-size: 20px;
@@ -123,6 +123,61 @@ header {
     left: 50%;
     margin-left: -13px;
     position: absolute; }
+
+.quotes {
+  margin: 60px auto 45px auto; }
+  .quotes .stars {
+    color: #fc3a43;
+    font-family: sans-serif;
+    font-size: 20px;
+    margin-bottom: 7px; }
+    .quotes .stars span:before {
+      content: "\2605";
+      position: absolute; }
+  .quotes .quote-title {
+    background: url(../img/quotes.png) no-repeat;
+    background-size: contain;
+    min-height: 170px; }
+  .quotes .quote {
+    position: relative;
+    background-color: #F4F4F4;
+    padding: 15px 12px 15px 15px;
+    min-height: 140px;
+    font-size: 17px;
+    line-height: 23px;
+    margin-bottom: 20px;
+    color: #7B7B7B; }
+    .quotes .quote .fold {
+      width: 30px;
+      height: 60px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: url(../img/fold.png) no-repeat;
+      background-size: cover; }
+    .quotes .quote.full {
+      height: 330px; }
+      .quotes .quote.full p {
+        margin-top: 50px; }
+    .quotes .quote > span {
+      position: absolute;
+      bottom: 15px;
+      color: #323232;
+      font-size: 13px;
+      font-weight: 400; }
+    .quotes .quote.alt {
+      background-color: #FC3A43;
+      color: #FFF; }
+      .quotes .quote.alt p {
+        font-size: 26px;
+        margin-top: 15px;
+        font-weight: bold; }
+      .quotes .quote.alt > span {
+        color: #FFF; }
+      .quotes .quote.alt .stars {
+        font-size: 28px; }
+        .quotes .quote.alt .stars span:before {
+          color: #9E121B; }
 
 footer {
   background: #df2727; }
