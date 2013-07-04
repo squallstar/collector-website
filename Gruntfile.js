@@ -17,22 +17,23 @@ module.exports = function(grunt) {
 
     clean: {
       all: ['.sass-cache', 'build'],
-      post_build: ['.sass-cache', 'npm-debug.log', 'build/.tsmp']
+      post_build: ['.sass-cache', 'npm-debug.log', 'build/.tmp']
     },
 
     concat: {      
-      libjs: {
+      js: {
         src: [
           'src/vendor/js/jquery.js',
           'src/js/main.js'
         ],
         dest: 'build/js/app.js'
       },
-      libcss: {
+      css: {
         src: [
-          'src/vendor/css/bootstrap.css'
+          'src/vendor/css/bootstrap.css',
+          'build/.tmp/main.css'
         ],
-        dest: 'build/.tmp/vendor.css'
+        dest: 'build/css/app.css'
       }
     },
     
@@ -56,8 +57,7 @@ module.exports = function(grunt) {
     sass: {
       development: {
         files: {
-          'build/css/app.css' : [
-            'build/.tmp/vendor.css',
+          'build/.tmp/main.css' : [
             'src/sass/main.scss'
           ]
         },
@@ -67,8 +67,7 @@ module.exports = function(grunt) {
       },
       release: {
         files: {
-          'build/css/app.css' : [
-            'build/.tmp/vendor.css',
+          'build/.tmp/main.css' : [
             'src/sass/main.scss'
           ]
         },
@@ -99,16 +98,16 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean:all',
     'copy:build',
-    'concat',
     'sass:development',
+    'concat',
     'clean:post_build'
   ]);
 
   grunt.registerTask('build:release', [
     'clean:all',
     'copy:build',
-    'concat',
     'sass:release',
+    'concat',
     'clean:post_build',
     'uglify:release'
   ]);

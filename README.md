@@ -11,7 +11,7 @@
 
 ### Build the product
 
-    grunt build
+    grunt
 
 ### Build the product for release
 
