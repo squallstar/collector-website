@@ -17,5 +17,10 @@
     background:url(../img/download-button.png) no-repeat;
     background-size:cover;
     margin-top:40px;
+    &:active {
+      -webkit-filter: brightness(90%); 
+      margin-top:42px;
+      margin-bottom:-2px;
+    }
   }
 }

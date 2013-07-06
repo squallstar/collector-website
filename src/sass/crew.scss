@@ -1,7 +1,45 @@
 .crew {
 	background:#F3F3F3;
-}
-.person {
-	width:300px;
-	background:#FFF;
+	text-align:center;
+	.person {
+		width:300px;
+		background:#FFF;
+		display:inline-block;
+		margin:40px 50px;
+		.img {
+			width:inherit;
+			height:180px;
+		}
+		.texts {
+			text-align:center;
+			padding:17px 25px;
+			h3 {
+				font:bold 22px 'Proxima Nova';
+				text-transform:uppercase;
+				color:#504A50;
+				margin-bottom:5px;
+			}
+			span {
+				font:bold 12px 'Benton Sans';
+				color:$red3;
+				display:block;
+				margin-bottom:15px;
+			}
+			p {
+				font:14px 'Proxima Nova';
+				line-height: 19px;
+				color:#A2A2A2;
+			}
+		}
+		&.nichan {
+			.img {
+				background-image:url(../img/crew-nichan.jpg);
+			}
+		}
+		&.michan {
+			.img {
+				background-image:url(../img/crew-michan.jpg);
+			}
+		}
+	}
 }
