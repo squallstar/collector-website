@@ -1,5 +1,7 @@
 // base.scss
 
+$footer-height: 80px;
+
 html {
   height: 100%;
   background: #FFF;
@@ -39,16 +41,11 @@ body {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -160px;
+  margin: 0 auto -$footer-height;
 }
 
 #push {
-  height: 160px;
-}
-
-footer {
-  padding-top: 40px;
-  height: 120px;
+  height: $footer-height;
 }
 
 header {
@@ -104,6 +101,7 @@ header {
 
 footer {
   background: $red;
+  height:$footer-height;
   .location {
     display:block;
     background:url(../img/icon-location.png) no-repeat top left;
