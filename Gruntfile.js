@@ -31,7 +31,8 @@ module.exports = function(grunt) {
       },
       css: {
         src: [
-          'src/vendor/css/bootstrap.css',
+          'src/vendor/css/reset.css',
+          'src/vendor/css/lemonade.css',
           'build/.tmp/main.css'
         ],
         dest: 'build/css/app.css'

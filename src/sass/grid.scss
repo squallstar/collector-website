@@ -1,0 +1,44 @@
+/* Custom Width
+===============================*/
+.bit-25 {
+    width:40%;
+}
+.bit-35 {
+    width:60%;
+}
+.bit-23 {
+    width: 66.6666666667%;
+}
+
+/* Landscape and down
+===============================*/
+@media (max-width: 480px) {
+    .bit-25 {
+    width:100%;
+    }
+    .bit-35 {
+    width:100%;
+    }
+}
+
+/* Landscape to Tablet Portrait
+===============================*/
+@media (min-width: 481px) and (max-width: 800px) {
+    .bit-25 {
+        width:100%;    
+    }
+    .bit-35 {
+        width:100%;    
+    }
+}
+
+/* Landscape Tablet to Desktop
+===============================*/
+@media (min-width: 801px) and (max-width: 1100px) {
+    .bit-25 {
+        width:40%;
+    }
+    .bit-35 {
+        width:40%;
+    }
+}

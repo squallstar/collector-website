@@ -1,8 +1,5 @@
 // base.scss
 
-.hide {
-  display:none;
-}
 html {
   height: 100%;
   background: #FFF;
@@ -14,6 +11,16 @@ body {
   height: 100%;
   background: #FFF;
   -webkit-font-smoothing: antialiased;
+}
+
+.container {
+  width: 90%;
+  max-width: 1080px;
+  margin: 0px auto;
+}
+
+.hide {
+  display:none;
 }
 
 .chromeframe {
@@ -60,9 +67,9 @@ header {
       a {
         color:#323232;
         font:bold 25px 'Proxima Nova';
+        text-decoration:none;
         &:hover {
           color:$pink;
-          text-decoration:none;
         }
       }
     }
