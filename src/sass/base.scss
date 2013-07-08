@@ -93,7 +93,14 @@ header {
   }
 }
 
-
+.logo {
+  display: block;
+  float: left;
+  width: 220px;
+  background: url(../img/logo@2x.png) no-repeat center center;
+  background-size:cover;
+  height: 60px;
+}
 
 footer {
   background: $red;
@@ -125,13 +132,4 @@ footer {
       }
     }
   }
-}
-
-.logo {
-  display: block;
-  float: left;
-  width: 220px;
-  background: url(../img/logo@2x.png) no-repeat center center;
-  background-size:cover;
-  height: 60px;
 }

@@ -1,6 +1,8 @@
+// features.scss
+
 .features {
   background:#F3F3F3;
-  padding:50px 0 35px 0;
+  padding:50px 0 30px 0;
   text-align:center;
   .feature-icon {
     margin:0 auto;
@@ -11,11 +13,13 @@
   }
   h3 {
     font-size:20px;
-    margin-bottom: 0;
+    font-weight:bold;
+    margin: 18px 0 10px 0;
   }
   p {
     padding:0 20px;
     font-size:13px;
+    line-height: 20px;
     font-family: 'Proxima Nova';
   }
 }
