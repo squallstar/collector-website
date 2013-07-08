@@ -22,3 +22,7 @@
 
     grunt watch
 
+### Build for release and deploy
+
+    grunt deploy:/path/to/dir
+
