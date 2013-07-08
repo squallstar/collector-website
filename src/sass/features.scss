@@ -5,11 +5,11 @@
   padding:50px 0 30px 0;
   text-align:center;
   .feature-icon {
+    background:#CCC;
+    border-radius:50px;
+    height:170px;
     margin:0 auto;
     width:170px;
-    height:170px;
-    border-radius:50px;
-    background:#CCC;
   }
   h3 {
     font-size:20px;
@@ -17,9 +17,9 @@
     margin: 18px 0 10px 0;
   }
   p {
-    padding:0 20px;
+    font-family: 'Proxima Nova';
     font-size:13px;
     line-height: 20px;
-    font-family: 'Proxima Nova';
+    padding:0 20px;
   }
 }

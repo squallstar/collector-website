@@ -4,23 +4,48 @@
 	background:#F3F3F3;
 	text-align:center;
 	.person {
-		width:300px;
 		background:#FFF;
 		display:inline-block;
 		margin:40px 50px;
+		width:300px;
+		.img {
+			height:180px;
+			width:inherit;
+		}
+		.texts {
+			text-align:center;
+			padding:17px 25px 13px 25px;
+			h3 {
+				color:#504A50;
+				font:bold 22px 'Proxima Nova';
+				margin-bottom:5px;
+				text-transform:uppercase;
+			}
+			span {
+				color:$red3;
+				display:block;
+				font:bold 12px 'Benton Sans';
+				margin-bottom:15px;
+			}
+			p {
+				color:#A2A2A2;
+				font:14px 'Proxima Nova';
+				line-height: 19px;
+			}
+		}
 		.socials {
-			height:30px;
 			background:$red;
+			height:30px;
 			text-align: center;
 			a {
-				display:inline-block;
-				width:20px;
-				height:20px;
-				margin:5px 4px 0 4px;
 				background-repeat:no-repeat;
 				background-position:center center;
-				-webkit-filter: brightness(0%) contrast(100%);
+				display:inline-block;
+				height:20px;
+				margin:5px 4px 0 4px;
 				opacity:0.3;
+				width:20px;
+				-webkit-filter: brightness(0%) contrast(100%);
 				&.twitter {
 					background-image:url(../img/social-twitter.png);
 				}
@@ -34,34 +59,9 @@
 					background-image:url(../img/social-mail.png);
 				}
 				&:hover {
-					-webkit-filter:none;
 					opacity:1;
+					-webkit-filter:none;
 				}
-			}
-		}
-		.img {
-			width:inherit;
-			height:180px;
-		}
-		.texts {
-			text-align:center;
-			padding:17px 25px 13px 25px;
-			h3 {
-				font:bold 22px 'Proxima Nova';
-				text-transform:uppercase;
-				color:#504A50;
-				margin-bottom:5px;
-			}
-			span {
-				font:bold 12px 'Benton Sans';
-				color:$red3;
-				display:block;
-				margin-bottom:15px;
-			}
-			p {
-				font:14px 'Proxima Nova';
-				line-height: 19px;
-				color:#A2A2A2;
 			}
 		}
 		&.nichan {

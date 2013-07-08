@@ -2,132 +2,145 @@
 
 $footer-height: 80px;
 
+::selection {
+	background-color: $pink;
+	color: #FFF;
+}
+
 html {
-  height: 100%;
-  background: #FFF;
-  font-family: 'BentonSans', Helvetica, sans-serif;
-  font-weight: 300;
+	background: #FFF;
+	font-family: 'BentonSans', Helvetica, sans-serif;
+	font-weight: 300;
+	height: 100%;
 }
 
 body {
-  height: 100%;
-  background: #FFF;
-  -webkit-font-smoothing: antialiased;
+	background: #FFF;
+	height: 100%;
+	-webkit-font-smoothing: antialiased;
 }
 
 .container {
-  width: 90%;
-  max-width: 1080px;
-  margin: 0px auto;
+	margin: 0px auto;
+	max-width: 1080px;
+	width: 90%;
 }
 
 .hide {
-  display:none;
+	display:none;
 }
 
 .chromeframe {
-  background:#000;
-  color:white;
-  a {
-    color:white;
-    text-decoration: underline
-  }
-  padding:50px;
-  font-size:15px;
-  margin-bottom:0
+	background:#000;
+	color:#FFF;
+	font-size:15px;
+	margin-bottom:0;
+	padding:50px;
+	a {
+		color:#FFF;
+		text-decoration: underline
+	}
 }
 
 #wrap {
-  min-height: 100%;
-  height: auto !important;
-  height: 100%;
-  margin: 0 auto -$footer-height;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -$footer-height;
+	min-height: 100%;
 }
 
 #push {
-  height: $footer-height;
+	height: $footer-height;
 }
 
 header {
-  background: #FFF;
-  padding: 25px 0;
-  .top-menu {
-    text-align: right;
-    margin:18px 0 0 0;
-    padding:0;
-    li {
-      display:inline-block;
-      margin-right:50px;
-      &:last-child {
-        margin-right:0;
-      }
-      a {
-        color:#323232;
-        font:bold 25px 'Proxima Nova';
-        text-decoration:none;
-        &:hover {
-          color:$pink;
-        }
-      }
-    }
-  }
+	background: #FFF;
+	padding: 25px 0;
+	.top-menu {
+		text-align: right;
+		margin:18px 0 0 0;
+		padding:0;
+		li {
+			display:inline-block;
+			margin-right:50px;
+			&:last-child {
+				margin-right:0;
+			}
+			a {
+				color:#323232;
+				font:bold 25px 'Proxima Nova';
+				text-decoration:none;
+				&:hover {
+					color:$pink;
+				}
+			}
+		}
+	}
 }
 
 .line {
-  height:10px;
-  background:$red;
-  position:relative;
-  .arrow {
-    width: 0; 
-    height: 0; 
-    border-left: 13px solid transparent;
-    border-right: 13px solid transparent;
-    border-top: 13px solid $red;
-    top:9px;
-    left:50%;
-    margin-left:-13px;
-    position:absolute;
-  }
+	background:$red;
+	height:10px;
+	position:relative;
+	.arrow {
+		border-left: 13px solid transparent;
+		border-right: 13px solid transparent;
+		border-top: 13px solid $red;
+		height:0;
+		left:50%;
+		margin-left:-13px;
+		position:absolute;
+		top:9px;
+		width:0;
+	}
 }
 
 .logo {
-  display: block;
-  float: left;
-  width: 220px;
-  background: url(../img/logo@2x.png) no-repeat center center;
-  background-size:cover;
-  height: 60px;
+	background: url(../img/logo@2x.png) no-repeat center center;
+	background-size:cover;
+	display: block;
+	float: left;
+	height: 60px;
+width: 220px;
 }
 
 footer {
-  background: $red;
-  height:$footer-height;
-  .location {
-    display:block;
-    background:url(../img/icon-location.png) no-repeat top left;
-    background-size: 41px 55px;
-    padding:17px 0 0 55px;
-    color: white;
-    font-family: 'Open Sans';
-    font-weight:300;
-    font-size:40px;
-    height:55px;
-    margin-top:-2px;
-  }
-  .socials {
-    text-align: right;
-    a {
-      background: #EEE;
-      display: inline-block;
-      margin-left: 30px;
-      width: 46px;
-      height: 46px;
-      border-radius: 7px;
-      background-size:cover;
-      transition:.2s;
-      &:hover {
-        background-color:$red
-      }
-    }
-  }
+	background: $red;
+	color:$pink;
+	height:$footer-height;
+	h3 {
+		font:bold 28px 'Proxima Nova';
+		margin-top:1px;
+	}
+	p {
+		font-size:14px;
+		font-weight:400;
+		margin-top:2px;
+	}
+	.socials {
+		text-align: right;
+		a {
+			background-repeat:no-repeat;
+			background-position:center right;
+			color:#FFF;
+			display: inline-block;
+			font:bold 16px 'Proxima Nova';
+			line-height:28px;
+			height:28px;
+			margin:12px 0 0 25px;
+			opacity:0.3;
+			padding-right:35px;
+			text-decoration: none;
+			&.facebook {
+				background-image:url(../img/footer-facebook.png);
+			}
+			&.twitter {
+				background-image:url(../img/footer-twitter.png);
+			}
+			&:hover {
+				opacity:1.0;
+				-webkit-filter:none;
+			}
+		}
+	}
 }
