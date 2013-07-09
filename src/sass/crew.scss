@@ -46,18 +46,13 @@
 				opacity:0.3;
 				width:20px;
 				-webkit-filter: brightness(0%) contrast(100%);
-				&.twitter {
-					background-image:url(../img/social-twitter.png);
+
+				@each $social in twitter, linkedin, dribbble, mail {
+					&.#{$social} {
+						background-image:url(../img/social-#{$social}.png);
+					}
 				}
-				&.linkedin {
-					background-image:url(../img/social-linkedin.png);
-				}
-				&.dribbble {
-					background-image:url(../img/social-dribbble.png);
-				}
-				&.mail {
-					background-image:url(../img/social-mail.png);
-				}
+
 				&:hover {
 					opacity:1;
 					-webkit-filter:none;
