@@ -3,6 +3,7 @@
 .crew {
 	background:#F3F3F3;
 	text-align:center;
+	padding-bottom:30px;
 	.person {
 		background:#FFF;
 		display:inline-block;
@@ -47,7 +48,7 @@
 				width:20px;
 				-webkit-filter: brightness(0%) contrast(100%);
 
-				@each $social in twitter, linkedin, dribbble, mail {
+				@each $social in twitter, linkedin, dribbble, github, mail {
 					&.#{$social} {
 						background-image:url(../img/social-#{$social}.png);
 					}

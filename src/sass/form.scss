@@ -1,0 +1,41 @@
+.hello {
+	background-color:$grey;
+	.banner {
+		background:url(../img/hello-bg.jpg) $red2;
+		background-size:cover;
+		color:#FFF;
+		text-align:center;
+		padding:28px 0 40px 0;
+		position:relative;
+		.mail {
+			background:url(../img/hello-mail.png) no-repeat center center;
+			height:52px;
+			width:48px;
+			margin:0 auto 16px auto;
+		}
+		.fold {
+			background:url(../img/hello-fold.png) no-repeat center center;
+			height:40px;
+			position:absolute;
+			right:0;
+			top:0;
+			width:40px;
+		}
+		h2 {
+			display:block;
+			font: {
+				family:'Proxima Nova';
+				size:58px;
+				weight:bold;
+			}
+		}
+		p {
+			font: {
+				family:'Benton Sans';
+				size:28px;
+				weight:500;
+			}
+			margin-top:15px;
+		}
+	}
+}
