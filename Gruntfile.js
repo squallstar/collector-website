@@ -42,7 +42,7 @@ module.exports = function(grunt) {
     copy: {
       build: {
         files: [
-          {expand: true, cwd: 'src/', src: ['favicon.ico'], dest: 'build/'},
+          {expand: true, cwd: 'src/', src: ['.htaccess', 'favicon.ico'], dest: 'build/'},
           {expand: true, cwd: 'src/fonts/', src: ['**'], dest: 'build/css/fonts/'},
           {expand: true, cwd: 'src/img/', src: ['**'], dest: 'build/img/'}
         ]
