@@ -4,9 +4,12 @@
 //Overrides and additions for Lemonade grid
 @import "grid";
 
+//Base and shared elements
 @import "base";
-@import "carousel";
-@import "features";
-@import "quotes";
-@import "crew";
-@import "form";
+
+//Sections
+@import "sections/carousel";
+@import "sections/features";
+@import "sections/quotes";
+@import "sections/crew";
+@import "sections/form";

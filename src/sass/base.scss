@@ -20,6 +20,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .container {
 	margin: 0px auto;
 	max-width: 1080px;
