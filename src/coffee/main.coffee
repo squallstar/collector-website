@@ -31,14 +31,25 @@ $(document).ready ->
         main.text 'Sending...'
         sec.text 'Please wait a second while we deliver your message.'
 
-        $.post endpoint+'sendmessage/', {
-          name: do name.val
-          email: do email.val
-          company: do $('input[name="company"]').val
-          website: do $('input[name="website"]').val
-          message: do message.val
-        }, (data) ->
-          main.text 'Your message has been sent!'
-          sec.text 'Thank you very much for your message. We\'ll try to get back to you as soon as possible.'
+        $.ajax
+          type: 'POST'
+          url: endpoint+'sendmessage/'
+          data: {
+            name: do name.val
+            email: do email.val
+            company: do $('input[name="company"]').val
+            website: do $('input[name="website"]').val
+            message: do message.val
+          }
+
+          success: () ->
+            main.text 'Your message has been sent!'
+            sec.text 'Thank you very much. We\'ll get back to you as soon as possible.'
+
+          error: (xhr, text_status, error_thrown) ->
+            response = $.parseJSON xhr.responseText
+            if response
+              main.text 'There was an error :('
+              sec.text response.description
 
       false
