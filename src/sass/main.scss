@@ -1,11 +1,11 @@
-@import "colors";
-@import "fonts";
+@import "common/colors";
+@import "common/fonts";
 
 //Overrides and additions for Lemonade grid
-@import "grid";
+@import "common/grid";
 
 //Base and shared elements
-@import "base";
+@import "common/base";
 
 //Sections
 @import "sections/carousel";
@@ -13,3 +13,6 @@
 @import "sections/quotes";
 @import "sections/crew";
 @import "sections/form";
+
+//Queries
+@import "mediaqueries";
