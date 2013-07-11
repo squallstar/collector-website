@@ -7,6 +7,7 @@ var mount = function (connect, dir) {
 module.exports = function(grunt) {
   
   grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-sass');
@@ -21,11 +22,24 @@ module.exports = function(grunt) {
       post_build: ['.sass-cache', 'npm-debug.log', 'build/.tmp']
     },
 
+    coffee: {      
+      compileJoined: {
+        options: {
+          join: true
+        },
+        files: {
+          'build/js/app.js': [
+            'src/coffee/*.coffee'
+          ]
+        }
+      },
+    },
+
     concat: {      
       js: {
         src: [
           'src/vendor/js/jquery.js',
-          'src/js/main.js'
+          'build/js/app.js'
         ],
         dest: 'build/js/app.js'
       },
@@ -114,6 +128,7 @@ module.exports = function(grunt) {
     'clean:all',
     'copy:build',
     'sass:development',
+    'coffee',
     'concat',
     'replace',
     'clean:post_build'
@@ -123,6 +138,7 @@ module.exports = function(grunt) {
     'clean:all',
     'copy:build',
     'sass:release',
+    'coffee',
     'concat',
     'replace',
     'clean:post_build',

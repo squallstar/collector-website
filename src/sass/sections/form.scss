@@ -83,11 +83,36 @@
 			}
 			&:focus {
 				&::-webkit-input-placeholder {
-					color:white;
+					color:#cbc5c5;
 				}
 				transition: all .3s;
-				background-color:$input-bg;
-				border-color:$input-border;
+				border-color:#BBB;
+			}
+		}
+		.last {
+			height:50px;
+			.counter {
+				font:bold 20px 'Benton Sans';
+				color:#A2A2A2;
+				float:right;
+				display:block;
+				height:inherit;
+				line-height:50px;
+			}
+			input.send {
+				font:400 20px 'Benton Sans';
+				border:0;
+				background:$red3;
+				float:right;
+				display:block;
+				height:inherit;
+				color:#FFF;
+				width:190px;
+				margin:0 0 0 15px;
+				padding:0;
+				&:hover {
+					cursor:pointer;
+				}
 			}
 		}
 	}

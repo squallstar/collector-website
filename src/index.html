@@ -230,22 +230,21 @@ _/        _/    _/  _/  _/  _/        _/          _/      _/    _/  _/
 
                     <form>
                         <div class="frame">
-                            <input placeholder="Name"/>
-                            <input placeholder="Company"/>
+                            <input placeholder="Name" name="name"/>
+                            <input placeholder="Company (optional)" name="company"/>
                         </div>
                         <div class="frame">
-                            <input placeholder="youremail@example.com"/>
-                            <input placeholder="Website"/>
+                            <input placeholder="youremail@example.com" name="email"/>
+                            <input placeholder="Website (optional)" name="website"/>
                         </div>
                         <textarea placeholder="Your message"></textarea>
-                        <div>
-                            
+                        <div class="frame last">
+                            <input type="submit" value="SEND MESSAGE" class="send" />
+                            <span class="counter">500</span>
                         </div>
                     </form>
-
                 </div>
             </div>
-
           
             <div id="push"></div>
         </div>
