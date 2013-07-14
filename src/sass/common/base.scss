@@ -116,14 +116,19 @@ footer {
 	background: $red;
 	color:$pink;
 	height:$footer-height;
-	h3 {
-		font:bold 28px 'Proxima Nova';
-		margin-top:1px;
-	}
-	p {
-		font-size:14px;
-		font-weight:400;
-		margin-top:2px;
+	.copy {
+		h3 {
+			font:bold 28px 'Proxima Nova';
+			margin-top:1px;
+		}
+		p {
+			font-size:14px;
+			font-weight:400;
+			margin-top:2px;
+		}
+		&:hover {
+			cursor:default;
+		}
 	}
 	.socials {
 		text-align: right;

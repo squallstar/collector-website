@@ -1,3 +1,24 @@
+input.styled {
+	background:white;
+	color:#444;
+	display:block;
+	margin:0;
+	padding:15px 10px;
+	border:3px solid white;
+	font: {
+		size:20px;
+		weight:normal;
+	}
+	&:focus {
+		&::-webkit-input-placeholder {
+			color:white;
+		}
+		transition: all .3s;
+		background-color:$input-bg;
+		border-color:$input-border;
+	}
+}
+
 .hello {
 	background-color:$grey;
 	.banner {
@@ -44,28 +65,12 @@
 		position:relative;
 		width:720px;
 		input {
-			background:white;
-			color:#444;
+			@extend input.styled;
 			width:47%;
-			display:block;
 			float:left;
 			margin:0 0 30px 0;
-			padding:15px 10px;
-			border:3px solid white;
-			font: {
-				size:20px;
-				weight:normal;
-			}
 			&:first-child {
 				margin-right:6%;
-			}
-			&:focus {
-				&::-webkit-input-placeholder {
-					color:white;
-				}
-				transition: all .3s;
-				background-color:$input-bg;
-				border-color:$input-border;
 			}
 		}
 		textarea {
