@@ -53,3 +53,19 @@ $(document).ready ->
               sec.text response.description
 
       false
+
+  #2 PEOPLE, hover image
+  do () ->
+    $(".person .img").each () ->
+      el = $ this
+
+      el.cycle(
+        fx: "none"
+        speed:    100, 
+        timeout:  170 
+      ).cycle "pause"
+
+      el.hover () ->
+        el.cycle "resume"
+      , () ->
+        el.cycle "pause"

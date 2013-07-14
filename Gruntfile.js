@@ -39,6 +39,7 @@ module.exports = function(grunt) {
       js: {
         src: [
           'src/vendor/js/jquery.js',
+          'src/vendor/js/jquery.cycle.js',
           'build/js/app.js'
         ],
         dest: 'build/js/app.js'

@@ -12,6 +12,9 @@
 		.img {
 			height:180px;
 			width:inherit;
+			position:relative;
+			overflow: hidden;
+			background:red;
 		}
 		.texts {
 			text-align:center;
@@ -58,16 +61,6 @@
 					opacity:1;
 					-webkit-filter:none;
 				}
-			}
-		}
-		&.nichan {
-			.img {
-				background-image:url(../img/crew-nichan.jpg);
-			}
-		}
-		&.michan {
-			.img {
-				background-image:url(../img/crew-michan.jpg);
 			}
 		}
 	}
