@@ -2,7 +2,20 @@ $(document).ready ->
 
   endpoint = 'http://collectorwp.com/api/v1/'
   
-  #1 FORM
+  #1 LINKS
+  do () ->
+    $('.top-menu a').click (e) ->
+      do e.preventDefault
+
+      targetid = $(this).attr('href')
+      target = $(targetid).offset()
+
+      $("html,body").animate
+        scrollTop: target.top - 30
+      , 400, () ->
+        do $('input[name="name"]').focus if targetid is '#write'
+
+  #2 FORM
   do () ->
     $form = $ 'form'
     $txt = $form.find 'textarea'
@@ -54,7 +67,7 @@ $(document).ready ->
 
       false
 
-  #2 PEOPLE, hover image
+  #3 PEOPLE (img cycle)
   do () ->
     $(".person .img").each () ->
       el = $ this
