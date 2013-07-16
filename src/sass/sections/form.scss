@@ -26,7 +26,7 @@ input.styled {
 		background-size:cover;
 		color:#FFF;
 		text-align:center;
-		padding:28px 0 40px 0;
+		padding:28px 0 34px 0;
 		position:relative;
 		.mail {
 			background:url(../img/hello-mail.png) no-repeat center center;
@@ -56,6 +56,7 @@ input.styled {
 				size:28px;
 				weight:300;
 			}
+			line-height: 33px;
 			margin-top:15px;
 		}
 	}
