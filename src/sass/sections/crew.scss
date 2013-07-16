@@ -23,6 +23,8 @@
 	}
 	.person {
 		background:#FFF;
+		position:relative;
+		overflow:hidden;
 		display:inline-block;
 		margin:40px 50px;
 		width:300px;
@@ -53,12 +55,17 @@
 				font:14px 'Proxima Nova';
 				font-weight:400;
 				line-height: 19px;
+				margin-bottom:30px;
 			}
 		}
 		.socials {
 			background:$red;
 			height:30px;
 			text-align: center;
+			position:absolute;
+			bottom:0;
+			width:100%;
+			z-index:100;
 			a {
 				background-repeat:no-repeat;
 				background-position:center center;
@@ -75,9 +82,69 @@
 					}
 				}
 
-				&:hover {
+				&:hover, &.active {
 					opacity:1;
 					-webkit-filter:none;
+				}
+			}
+		}
+		.contact-form {
+			position:absolute;
+			width:100%;
+			height:340px;
+			background:#FFF;
+			z-index:50;
+			top:0;
+			left:0;
+			transition: top 0.5s;
+			&.hidden {
+				top:400px;
+			}
+			.margin {
+				padding:17px 20px;
+				$grey-form-bg: #F3F3F3;
+				input {
+					@extend input.styled;
+					width:100%;
+					display:block;
+					font-size:15px;
+					margin:0;
+					padding:8px 10px;
+					background-color:$grey-form-bg;
+					border-color:$grey-form-bg;
+				}
+				textarea {
+					margin:18px 0;
+					padding-top:6px;
+					height:80px;
+					font-size:15px;
+					line-height:21px;
+					background-color:$grey-form-bg;
+					border-color:$grey-form-bg;
+					&:focus {
+						&::-webkit-input-placeholder {
+							color:white;
+						}
+						transition: all .3s;
+						background-color:$input-bg;
+						border-color:$input-border;
+					}
+				}
+				input.send {
+					font:bold 15px 'Benton Sans';
+					border:0;
+					background:$red3;
+					float:right;
+					display:block;
+					height:35px;
+					line-height:35px;
+					color:#FFF;
+					width:100px;
+					margin:0 0 0 15px;
+					padding:0;
+					&:hover {
+						cursor:pointer;
+					}
 				}
 			}
 		}

@@ -90,6 +90,15 @@ $(document).ready ->
 
   #4 CREW FORM
   do () ->
+
+    $('.person .mail').click (e) ->
+      do e.preventDefault
+      el = $ this
+      form = el.closest('.person').find('.contact-form')
+
+      form.toggleClass 'hidden'
+      el.toggleClass 'active'
+
     $form = $ '.person form'
 
     $form.submit ->

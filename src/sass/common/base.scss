@@ -152,3 +152,47 @@ footer {
 		}
 	}
 }
+
+input.styled {
+	background:white;
+	color:#444;
+	display:block;
+	margin:0;
+	padding:15px 10px;
+	border:3px solid white;
+	font: {
+		size:20px;
+		family:'Proxima Nova';
+		weight:300;
+	}
+	&:focus {
+		&::-webkit-input-placeholder {
+			color:white;
+		}
+		transition: all .3s;
+		background-color:$input-bg;
+		border-color:$input-border;
+	}
+}
+
+textarea {
+	background:white;
+	color:#444;
+	height:140px;
+	width:100%;
+	display:block;
+	font: {
+		family: 'Proxima Nova';
+		size:20px;
+		weight:300;
+	}
+	padding:15px 10px;
+	border:3px solid white;
+	&:focus {
+		&::-webkit-input-placeholder {
+			color:#cbc5c5;
+		}
+		transition: all .3s;
+		border-color:#BBB;
+	}
+}
