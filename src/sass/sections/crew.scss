@@ -4,6 +4,23 @@
 	background:#F3F3F3;
 	text-align:center;
 	padding-bottom:30px;
+	aside {
+		display:block;
+		background:url(../img/crew-bg.jpg) no-repeat #FFF;
+		height:210px;
+		background-size:cover;	
+		margin-bottom:-120px;	
+		h2 {
+			margin:0;
+			padding:25px 0 0 0;
+			font: {
+				weight:bold;
+				family:'Proxima Nova';
+				size:75px;
+			}
+			color:#504A50;
+		}
+	}
 	.person {
 		background:#FFF;
 		display:inline-block;

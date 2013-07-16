@@ -19,6 +19,22 @@
 			width:auto;
 		}
 	}
+	footer {
+		.bit-2 {
+			width:100%;
+		}
+		.socials {
+			display:none;
+		}
+	}
+	.crew {
+		aside {
+			h2 {
+				font-size:50px;
+				padding-top:45px;
+			}
+		}
+	}
 }
 
 @media (max-width:480px) {
@@ -28,8 +44,8 @@
 			line-height:48px;
 		}
 		.download-button {
-			width:320px;
-			height:83px;
+			width:240px;
+			height:62px;
 		}
 	}
 	.features {
@@ -38,6 +54,12 @@
 		}
 	}
 	.crew {
+		aside {
+			h2 {
+				font-size:35px;
+				padding-top:35px;
+			}
+		}
 		.person {
 			margin:0 auto 30px auto;
 		}
