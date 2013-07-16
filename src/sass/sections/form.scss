@@ -54,7 +54,7 @@ input.styled {
 			font: {
 				family:'Benton Sans';
 				size:28px;
-				weight:500;
+				weight:300;
 			}
 			margin-top:15px;
 		}
@@ -68,6 +68,8 @@ input.styled {
 			@extend input.styled;
 			width:47%;
 			float:left;
+			font-family:'Proxima Nova';
+			font-weight:300;
 			margin:0 0 30px 0;
 			&:first-child {
 				margin-right:6%;
@@ -78,6 +80,8 @@ input.styled {
 			color:#444;
 			height:140px;
 			width:100%;
+			font-family:'Proxima Nova';
+			font-weight:300;
 			display:block;
 			margin:0 0 30px 0;
 			padding:15px 10px;
