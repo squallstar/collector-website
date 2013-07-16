@@ -3,6 +3,7 @@
     gem install sass
 
     npm install grunt-contrib-clean --save-dev
+    npm install grunt-contrib-coffee --save-dev
     npm install grunt-contrib-concat --save-dev
     npm install grunt-contrib-copy --save-dev
     npm install grunt-contrib-sass --save-dev
