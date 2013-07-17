@@ -38,7 +38,14 @@
 }
 
 @media (max-width:480px) {
+	header {
+		.logo {
+			width:170px;
+			height:45px;
+		}
+	}
 	.carousel {
+		display:none;
 		h2 {
 			font-size:33px;
 			line-height:48px;
