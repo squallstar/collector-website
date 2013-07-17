@@ -6,12 +6,11 @@
 		width:1080px;
 	}
 	.stars {
-		color:$red2;
-		font-family: sans-serif;
-		font-size: 20px;
-		span:before {
-			content: "\2605";
-			position: absolute;
+		span {
+			width:22px;
+			height:20px;
+			display:inline-block;
+			background:url(../img/star.png) no-repeat;
 		}
 		margin-bottom:7px;
 	}
@@ -66,9 +65,10 @@
 				color:#FFF;
 			}
 			.stars {
-				font-size: 28px;
-				span:before {
-					color:#9E121B;
+				span {
+					width:32px;
+					height:30px;
+					background-image:url(../img/star-big.png);
 				}
 			}
 		}
