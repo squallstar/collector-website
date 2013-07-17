@@ -1,14 +1,29 @@
 // carousel.scss
 
 .carousel {
-  background-color:#DDD;
+  background-color:#69CDAC;
   margin-bottom:0;
   padding-bottom:70px;
+  height:400px;
+  position:relative;
+
+  .movie {
+    position:absolute;
+    right:50%;
+    video {
+      position:relative;
+      left:50%;
+    }
+  }
+
   h2 {
     font-size:54px;
     font-weight:300;
     line-height:67px;
+    color:#FFF;
     margin-top:50px;
+    position:relative;
+    z-index:2;
   }
   .download-button {
     background:url(../img/download-button.png) no-repeat;
@@ -17,6 +32,8 @@
     height:103px;
     margin-top:40px;
     width:400px;
+    position:relative;
+    z-index:2;
     &:active {
       margin-bottom:-2px;
       margin-top:42px;

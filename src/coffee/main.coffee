@@ -147,3 +147,10 @@ $(document).ready ->
       $(tile).toggleClass 'on'
 
     , 3000
+
+  $ ->
+    video = document.getElementsByTagName('video')[0];
+    videoEnded = (e) ->
+      $('.carousel .frame').fadeIn 500
+
+    video.addEventListener 'ended', videoEnded, false

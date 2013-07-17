@@ -59,7 +59,8 @@ module.exports = function(grunt) {
         files: [
           {expand: true, cwd: 'src/', src: ['.htaccess', 'favicon.ico'], dest: 'build/'},
           {expand: true, cwd: 'src/fonts/', src: ['**'], dest: 'build/css/fonts/'},
-          {expand: true, cwd: 'src/img/', src: ['**'], dest: 'build/img/'}
+          {expand: true, cwd: 'src/img/', src: ['**'], dest: 'build/img/'},
+          {expand: true, cwd: 'src/video/', src: ['**'], dest: 'build/video/'}
         ]
       },
 
