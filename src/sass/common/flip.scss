@@ -46,7 +46,7 @@ div.rotate.x > *:nth-child(2){ /* X Axis rotate specific CSS. Rotate 2nd child D
 }
 
 
-div.flip:hover > div.rotate.x{ /* X Axis rotate specific CSS. Rotate div.rotate.x when mouse rolls over container */
+div.flip.on > div.rotate.x{ /* X Axis rotate specific CSS. Rotate div.rotate.x when mouse rolls over container */
 	-moz-transform: rotateX(180deg);
 	-webkit-transform: rotateX(180deg);
 	-o-transform: rotateX(180deg);
@@ -62,9 +62,11 @@ div.rotate.y > *:nth-child(2){ /* Y Axis rotate specific CSS. Rotate 2nd child D
 }
 
 
-div.flip:hover > div.rotate.y{ /* Y Axis rotate specific CSS. Rotate div.rotate.y when mouse rolls over container */
-	-moz-transform: rotateY(180deg);
-	-webkit-transform: rotateY(180deg);
-	-o-transform: rotateY(180deg);
-	transform: rotateY(180deg);
+div.flip.on {
+	> div.rotate.y { /* Y Axis rotate specific CSS. Rotate div.rotate.y when mouse rolls over container */
+		-moz-transform: rotateY(180deg);
+		-webkit-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
 }

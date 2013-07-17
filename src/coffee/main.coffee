@@ -1,12 +1,12 @@
-String.prototype.capitalize = () ->
-  this.charAt(0).toUpperCase() + this.slice(1)
+# -----------------------------------------------------------------------
+# APP MAIN JS
 
 $(document).ready ->
 
   endpoint = 'http://collectorwp.com/api/v1/'
   
   #1 LINKS
-  do () ->
+  $ ->
     $('.top-menu a').click (e) ->
       do e.preventDefault
 
@@ -19,12 +19,12 @@ $(document).ready ->
         do $('input[name="name"]').focus if targetid is '#write'
 
   #2 FORM
-  do () ->
+  $ ->
     $form = $ '.hello form'
     $txt = $form.find 'textarea'
     $counter = $form.find 'span.counter'
 
-    $txt.on 'keyup', () ->
+    $txt.on 'keyup', ->
       text = do $txt.val
       remaining = 500 - text.length
       if remaining < 0
@@ -42,7 +42,7 @@ $(document).ready ->
       return do email.focus && false if email.val().length == 0
       return do message.focus && false if message.val().length == 0
 
-      form.slideUp 500, () ->
+      form.slideUp 500, ->
         main = $ '.hello .banner h2'
         sec = $ '.hello .banner p'
         main.text 'Sending...'
@@ -73,7 +73,7 @@ $(document).ready ->
       false
 
   #3 PEOPLE (img cycle)
-  do () ->
+  $ ->
     $(".person .img").each () ->
       el = $ this
 
@@ -89,7 +89,7 @@ $(document).ready ->
         el.cycle "pause"
 
   #4 CREW FORM
-  do () ->
+  $ ->
 
     $('.person .mail').click (e) ->
       do e.preventDefault
@@ -136,3 +136,14 @@ $(document).ready ->
               main.text 'There was an error sending your message: ' + response.description
 
       false
+
+
+  #5 SCRIPT TO FLIP THE FILES
+  $ ->
+    tiles = $ '.quotes .flip'
+    window.setInterval () ->
+
+      tile = tiles[Math.floor(Math.random() * tiles.length)]
+      $(tile).toggleClass 'on'
+
+    , 3000
