@@ -39,9 +39,12 @@
 
 @media (max-width:480px) {
 	header {
+		padding:20px 0 3px 0;
 		.logo {
 			width:170px;
 			height:45px;
+			float:none;
+			margin:0 auto;
 		}
 	}
 	.carousel {
