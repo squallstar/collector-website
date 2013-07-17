@@ -96,6 +96,7 @@
 			z-index:50;
 			top:0;
 			left:0;
+			-webkit-transition: top 0.5s;
 			transition: top 0.5s;
 			&.hidden {
 				top:400px;
@@ -125,6 +126,7 @@
 						&::-webkit-input-placeholder {
 							color:white;
 						}
+						-webkit-transition: all .3s;
 						transition: all .3s;
 						background-color:$input-bg;
 						border-color:$input-border;

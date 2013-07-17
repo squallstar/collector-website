@@ -170,6 +170,7 @@ input.styled {
 		&::-webkit-input-placeholder {
 			color:white;
 		}
+		-webkit-transition: all .3s;
 		transition: all .3s;
 		background-color:$input-bg;
 		border-color:$input-border;
@@ -193,6 +194,7 @@ textarea {
 		&::-webkit-input-placeholder {
 			color:#cbc5c5;
 		}
+		-webkit-transition: all .3s;
 		transition: all .3s;
 		border-color:#BBB;
 	}
