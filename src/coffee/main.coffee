@@ -74,13 +74,20 @@ $(document).ready ->
 
   #3 PEOPLE (img cycle)
   $ ->
+    $(".person").each () ->
+      el = $ this
+      container = el.find '.img'
+      person = el.data 'person'
+      for i in [2..13]
+        container.append $ "<li><img src='img/crew/#{person}-#{i}.jpg' /></li>"
+
     $(".person .img").each () ->
       el = $ this
 
       el.cycle(
         fx: "none"
-        speed:    100, 
-        timeout:  170 
+        speed:    90, 
+        timeout:  160 
       ).cycle "pause"
 
       el.hover () ->
