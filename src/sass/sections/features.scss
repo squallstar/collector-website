@@ -6,8 +6,8 @@
   text-align:center;
   .feature-icon {
     height:170px;
-    margin:0 auto;
     width:170px;
+    margin:0 auto;
     @each $feature in collections, social, reader, reading {
       &.feature-#{$feature} {
         @extend .i-feature-#{$feature}
@@ -26,5 +26,21 @@
     font-size:13px;
     line-height: 20px;
     padding:0 20px;
+  }
+}
+
+@media (max-width:480px) {
+  .features {
+    .feature-icon {
+      @each $feature in collections, social, reader, reading {
+        &.feature-#{$feature} {
+          background:url(../img/feature-#{$feature}-mobile.png) no-repeat center center;
+          background-size:cover;
+          width:212px;
+          height:212px;
+          margin-bottom:0;
+        }
+      }
+    }
   }
 }
