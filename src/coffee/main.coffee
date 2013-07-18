@@ -108,15 +108,13 @@ $(document).ready ->
       email = form.find 'input[name="email"]'
       message = form.find 'textarea'
 
-      return if recipient not 'nicholas' and recipient not 'michela'
-
       return do email.focus && false if email.val().length == 0
       return do message.focus && false if message.val().length == 0
 
       form.slideUp 500, () ->
         main = $ '<p class="response"></p>'
         form.replaceWith main
-        main.text 'Please wait a second while we deliver your message to ' + person + '.'
+        main.html 'Please wait a second while we deliver your message to ' + person + '.'
 
         $.ajax
           type: 'POST'
