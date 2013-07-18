@@ -141,10 +141,10 @@ footer {
 			padding-right:35px;
 			text-decoration: none;
 			&.facebook {
-				@extend .i-footer-facebook;
+				background-image:url(../img/footer-facebook.png);
 			}
 			&.twitter {
-				@extend .i-footer-twitter;
+				background-image:url(../img/footer-twitter.png);
 			}
 			&:hover {
 				opacity:1.0;
