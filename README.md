@@ -10,6 +10,7 @@
     npm install grunt-contrib-uglify --save-dev
     npm install grunt-contrib-watch --save-dev
     npm install grunt-replace --save-dev
+    npm install grunt-spritesmith --save-dev
 
 ### Build the product
 

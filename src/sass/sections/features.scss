@@ -8,9 +8,9 @@
     height:170px;
     margin:0 auto;
     width:170px;
-    @each $icon in collections, social, reading {
-      &.icon-#{$icon} {
-        background:url(../img/feature-#{$icon}.png) no-repeat center center;
+    @each $feature in collections, social, reader, reading {
+      &.feature-#{$feature} {
+        @extend .i-feature-#{$feature}
       }
     }
   }

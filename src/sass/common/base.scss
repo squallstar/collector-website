@@ -100,12 +100,12 @@ header {
 }
 
 .logo {
-	background: url(../img/logo@2x.png) no-repeat center center;
+	background: url(../img/logo.png) no-repeat center center;
 	background-size:cover;
 	display: block;
 	float: left;
 	height: 60px;
-width: 220px;
+	width: 220px;
 }
 
 footer {
@@ -141,10 +141,10 @@ footer {
 			padding-right:35px;
 			text-decoration: none;
 			&.facebook {
-				background-image:url(../img/footer-facebook.png);
+				@extend .i-footer-facebook;
 			}
 			&.twitter {
-				background-image:url(../img/footer-twitter.png);
+				@extend .i-footer-twitter;
 			}
 			&:hover {
 				opacity:1.0;

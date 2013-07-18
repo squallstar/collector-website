@@ -77,7 +77,7 @@
 
 				@each $social in twitter, linkedin, dribbble, github, mail {
 					&.#{$social} {
-						background-image:url(../img/social-#{$social}.png);
+						@extend .i-social-#{$social};
 					}
 				}
 

@@ -8,18 +8,14 @@
 		padding:28px 0 34px 0;
 		position:relative;
 		.mail {
-			background:url(../img/hello-mail.png) no-repeat center center;
-			height:52px;
-			width:48px;
+			@extend .i-hello-mail;
 			margin:0 auto 9px auto;
 		}
 		.fold {
-			background:url(../img/hello-fold.png) no-repeat center center;
-			height:40px;
+			@extend .i-hello-fold;
 			position:absolute;
 			right:0;
 			top:0;
-			width:40px;
 		}
 		h2 {
 			display:block;

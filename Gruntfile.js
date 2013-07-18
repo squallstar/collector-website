@@ -14,6 +14,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-replace');
+  grunt.loadNpmTasks('grunt-spritesmith');
   
   grunt.initConfig({
 
@@ -85,6 +86,26 @@ module.exports = function(grunt) {
       }
     },
 
+    sprite: {
+        build: {
+            src: ['src/sprite/*.png'],
+            destImg: 'build/img/sprite.png',
+            destCSS: 'src/sass/common/sprite.scss',
+            imgPath: '../img/sprite.png',
+            algorithm: 'left-right',
+            engine: 'gm',
+            'engineOpts': {
+              'imagemagick': true
+            },
+            cssFormat: 'css',
+            cssOpts: {
+              cssClass: function (item) {
+                return '.i-' + item.name;
+              }
+            }
+        }
+    },
+
     sass: {
       development: {
         files: {
@@ -128,6 +149,7 @@ module.exports = function(grunt) {
   
   grunt.registerTask('build', [
     'clean:all',
+    'sprite',
     'copy:build',
     'sass:development',
     'coffee',
@@ -138,6 +160,7 @@ module.exports = function(grunt) {
 
   grunt.registerTask('build:release', [
     'clean:all',
+    'sprite',
     'copy:build',
     'sass:release',
     'coffee',
@@ -154,7 +177,7 @@ module.exports = function(grunt) {
         return false;
       }
       grunt.config.set('deployPath', where);
-      grunt.task.run(['build:release', 'copy:deploy']);
+      grunt.task.run(['build:release', 'copy:deploy', 'clean:all']);
     }
   );
 

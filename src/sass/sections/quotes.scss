@@ -7,10 +7,8 @@
 	}
 	.stars {
 		span {
-			width:22px;
-			height:20px;
 			display:inline-block;
-			background:url(../img/star.png) no-repeat;
+			@extend .i-star;
 		}
 		margin-bottom:7px;
 	}
@@ -32,13 +30,10 @@
 		padding:15px 12px 15px 15px;
 		position:relative;
 		.fold {
-			background:url(../img/fold.png) no-repeat;
-			background-size:cover;
-			height:60px;
+			@extend .i-fold;
 			position: absolute;
 			right:0;
 			top:0;
-			width:30px;
 		}
 		&.full {
 		  height:360px;
@@ -66,9 +61,7 @@
 			}
 			.stars {
 				span {
-					width:32px;
-					height:30px;
-					background-image:url(../img/star-big.png);
+					@extend .i-star-big
 				}
 			}
 		}
