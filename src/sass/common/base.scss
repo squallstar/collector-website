@@ -80,6 +80,16 @@ header {
 			}
 		}
 	}
+	.mobile-menu-activator {
+		@extend .i-menu-ui;
+		position:absolute;
+		right:20px;
+		top:32px;
+		cursor:pointer;
+		&:hover, &:active, &.active {
+			@extend .i-menu-ui-active;
+		}
+	}
 }
 
 .line {

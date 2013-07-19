@@ -1,3 +1,7 @@
+.mobile-only, .tablet-mobile-only {
+	display:none;
+}
+
 @media (max-width: 1100px) {
 	.quotes {
 		display:none;
@@ -5,10 +9,14 @@
 }
 
 @media (max-width: 767px) {
+	.tablet-mobile-only {
+		display:block;
+	}
 	.top-menu {
 		display:none;
 	}
 	.carousel {
+		display:none;
 		h2 {
 			font-size:43px;
 			line-height:58px;
@@ -38,25 +46,23 @@
 }
 
 @media (max-width:480px) {
+	.mobile-only, .tablet-mobile-only {
+		display:block;
+	}
+	.mobile-hidden {
+		display:none;
+	}
 	header {
-		padding:20px 0 3px 0;
+		padding:0;
+		height:90px;
 		.logo {
 			width:170px;
 			height:45px;
-			float:none;
-			margin:0 auto;
+			margin-top:11px;
 		}
 	}
 	.carousel {
 		display:none;
-		h2 {
-			font-size:33px;
-			line-height:48px;
-		}
-		.download-button {
-			width:240px;
-			height:62px;
-		}
 	}
 	.features {
 		.bit-4 {

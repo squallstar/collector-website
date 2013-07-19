@@ -3,16 +3,12 @@
 .carousel {
   background-color:#000;
   margin-bottom:0;
-  padding-bottom:70px;
-  height:400px;
   position:relative;
 
   .movie {
-    position:absolute;
-    right:50%;
+    margin-bottom:-3px;
     video {
-      position:relative;
-      left:50%;
+      width:100%;
     }
   }
 
@@ -21,8 +17,8 @@
     font-weight:300;
     line-height:67px;
     color:#FFF;
-    margin-top:50px;
-    position:relative;
+    top:50px;
+    position:absolute;
     z-index:2;
   }
   .download-button {
@@ -30,14 +26,39 @@
     background-size:cover;
     display:block;
     height:103px;
-    margin-top:40px;
+    top:215px;
     width:400px;
-    position:relative;
+    position:absolute;
     z-index:2;
     &:active {
       margin-bottom:-2px;
       margin-top:42px;
       -webkit-filter: brightness(90%); 
+    }
+  }
+}
+
+.mobile-carousel {
+  height:399px;
+  background:url(../img/teaser-mobile.jpg) no-repeat center center #69ceae;
+  position:relative;
+  .mobile-menu {
+    position:absolute;
+    display:none;
+    width:100%;
+    ul {
+      li {
+        display:block;
+        a {
+          display:block;
+          background:#c5c5c5;
+          height:45px;
+          color:#FFF;
+          font-size:15px;
+          padding-left:80px;
+          text-decoration:none;
+        }
+      }
     }
   }
 }

@@ -7,11 +7,14 @@ $(document).ready ->
   
   #1 LINKS
   $ ->
-    $('.top-menu a').click (e) ->
+    $('.top-menu a, .mobile-menu a').click (e) ->
       do e.preventDefault
 
       targetid = $(this).attr('href')
       target = $(targetid).offset()
+
+      $('.mobile-menu').slideUp 500
+      $('.mobile-menu-activator').removeClass 'active'
 
       $("html,body").animate
         scrollTop: target.top - 30
@@ -153,9 +156,18 @@ $(document).ready ->
 
     , 3000
 
+  #6 VIDEO
   $ ->
     video = document.getElementsByTagName('video')[0];
     videoEnded = (e) ->
-      $('.carousel .frame').fadeIn 500
+      $('.carousel .container').fadeIn 500
 
     video.addEventListener 'ended', videoEnded, false
+
+  #7 MOBILE MENU
+  $ ->
+    menu = $ '.mobile-menu'
+    $('.mobile-menu-activator').click () ->
+      el = $ this
+      el.toggleClass 'active'
+      menu.slideToggle 500

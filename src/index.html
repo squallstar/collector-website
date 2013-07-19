@@ -51,11 +51,12 @@ _/        _/    _/  _/  _/  _/        _/          _/      _/    _/  _/
             <div class="topbar"></div>
             <header>
                 <div class="container">
+                    <div class="mobile-menu-activator mobile-only"></div>
                     <div class="frame">
                         <div class="bit-2">
                             <a href="/" class="logo"></a>
                         </div>
-                        <div class="bit-2">
+                        <div class="bit-2 mobile-hidden">
                             <ul class="top-menu">
                                 <li><a href="#about">about us</a></li>
                                 <li><a href="#write">say hello</a></li>
@@ -65,19 +66,24 @@ _/        _/    _/  _/  _/  _/        _/          _/      _/    _/  _/
                 </div>
             </header>
 
+            <div class="mobile-carousel tablet-mobile-only">
+                <div class="mobile-menu">
+                    <ul>
+                        <li><a href="#about">About us</a></li>
+                        <li><a href="#write">Say hello!</a></li>
+                    </ul>
+                </div>
+            </div>
+
             <div class="carousel">
-                <div class="container">
-                    <div class="movie">
-                        <video poster="img/video-poster.jpg" title="Collector" preload autoplay>
-                            <source src="video/video.mp4" type="video/mp4"/>
-                            <source src="video/video.webm" type="video/webm"/>
-                        </video>
-                    </div>
-                    <div class="frame hide">
-                        <div class="bit-1">
-                            <h2>The best news-reader<br />for Windows Phone</h2>
-                            <a href="http://www.windowsphone.com/s?appid=8864cfd0-bc46-4a72-a3bd-bc2156b967de" class="download-button"></a>
-                        </div>
+                <div class="movie">
+                    <video poster="img/video-poster.jpg" preload autoplay>
+                        <source src="video/video.mp4" type="video/mp4"/>
+                        <source src="video/video.webm" type="video/webm"/>
+                    </video>
+                    <div class="container hide">
+                        <h2>The best news-reader<br />for Windows Phone</h2>
+                        <a href="http://www.windowsphone.com/s?appid=8864cfd0-bc46-4a72-a3bd-bc2156b967de" class="download-button"></a>
                     </div>
                 </div>
             </div>
