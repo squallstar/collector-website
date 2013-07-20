@@ -7,8 +7,12 @@
 
   .movie {
     margin-bottom:-3px;
+    text-align:center;
     video {
       width:100%;
+      max-width:1170px;
+      max-height:400px;
+      margin:0 auto;
     }
   }
 

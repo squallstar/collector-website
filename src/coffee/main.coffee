@@ -63,7 +63,7 @@ $(document).ready ->
             company: do form.find('input[name="company"]').val
             website: do form.find('input[name="website"]').val
             message: do message.val
-            target: 'all'
+            recipient: 'all'
           }
 
           success: () ->
@@ -136,7 +136,7 @@ $(document).ready ->
           data: {
             email: do email.val
             message: do message.val
-            target: recipient
+            recipient: recipient
           }
 
           success: () ->
