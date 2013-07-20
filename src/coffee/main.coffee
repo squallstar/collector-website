@@ -100,6 +100,7 @@ $(document).ready ->
         el.cycle "resume"
       , () ->
         el.cycle "pause"
+        el.cycle 0
 
   #4 CREW FORM
   $ ->
