@@ -108,9 +108,12 @@ $(document).ready ->
     $('.person .mail').click (e) ->
       do e.preventDefault
       el = $ this
-      form = el.closest('.person').find('.contact-form')
+      person = el.closest('.person')
+      form = person.find('.contact-form')
 
       form.toggleClass 'hidden'
+      person.find('.contact-form-image').fadeToggle 250, () ->
+        do form.find('input[name="email"]').focus
       el.toggleClass 'active'
 
     $form = $ '.person form'

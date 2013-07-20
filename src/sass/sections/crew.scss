@@ -87,16 +87,32 @@
 				}
 			}
 		}
+		.contact-form-image {
+			width:100%;
+			height:180px;
+			background-size:cover;
+			position:absolute;
+			top:0;
+			z-index:49;
+			display:none;
+		}
+		@each $person in nichan, michan {
+			&.#{$person} {
+				.contact-form-image {
+					background:url(../img/mail-#{$person}.jpg) no-repeat;
+				}
+			}
+		}
 		.contact-form {
 			position:absolute;
 			width:100%;
 			height:340px;
 			background:#FFF;
 			z-index:50;
-			top:0;
+			top:120px;
 			left:0;
-			-webkit-transition: top 0.5s;
-			transition: top 0.5s;
+			-webkit-transition: top 0.4s;
+			transition: top 0.4s;
 			&.hidden {
 				top:400px;
 			}
