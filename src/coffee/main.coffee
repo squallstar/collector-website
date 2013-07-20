@@ -11,6 +11,7 @@ $(document).ready ->
   #1 LINKS
   $ ->
     $('.top-menu a, .mobile-menu a').click (e) ->
+      return if $(this).hasClass 'http'
       do e.preventDefault
 
       targetid = $(this).attr('href')
@@ -113,7 +114,8 @@ $(document).ready ->
 
       form.toggleClass 'hidden'
       person.find('.contact-form-image').fadeToggle 250, () ->
-        do form.find('input[name="email"]').focus
+        console.log $(this).css('display')
+        do form.find('input[name="email"]').focus if !form.hasClass('hidden')
       el.toggleClass 'active'
 
     $form = $ '.person form'
