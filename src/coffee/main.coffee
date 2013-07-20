@@ -4,6 +4,9 @@
 $(document).ready ->
 
   endpoint = 'http://collectorwp.com/api/v1/'
+
+  valid_email = (email) ->
+    return String(email).match(/^\s*[\w\-\+_]+(?:\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(?:\.[\w‌​\-\+_]+)*\s*$/)
   
   #1 LINKS
   $ ->
@@ -42,8 +45,8 @@ $(document).ready ->
       message = form.find 'textarea'
 
       return do name.focus && false if name.val().length == 0
-      return do email.focus && false if email.val().length == 0
-      return do message.focus && false if message.val().length == 0
+      return do email.focus && false if email.val().length == 0 || !valid_email(email.val())
+      return do message.focus && false if message.val().length < 4
 
       form.slideUp 500, ->
         main = $ '.hello .banner h2'
@@ -118,8 +121,8 @@ $(document).ready ->
       email = form.find 'input[name="email"]'
       message = form.find 'textarea'
 
-      return do email.focus && false if email.val().length == 0
-      return do message.focus && false if message.val().length == 0
+      return do email.focus && false if email.val().length == 0 || !valid_email(email.val())
+      return do message.focus && false if message.val().length < 4
 
       form.slideUp 500, () ->
         main = $ '<p class="response"></p>'

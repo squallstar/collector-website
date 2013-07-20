@@ -1,5 +1,6 @@
 .hello {
 	background-color:$grey;
+	padding-bottom:50px;
 	.banner {
 		background:url(../img/hello-bg.jpg) $red2;
 		background-size:cover;
@@ -37,7 +38,6 @@
 	}
 	form {
 		margin:30px auto 0 auto;
-		padding-bottom:40px;
 		position:relative;
 		width:720px;
 		input {
