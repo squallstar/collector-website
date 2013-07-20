@@ -1,3 +1,11 @@
+# Collector Website
+
+http://discover.collectorwp.com
+
+---
+
+## Development
+
 ### Getting started
 
     gem install sass
