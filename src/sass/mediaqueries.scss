@@ -133,12 +133,27 @@
 		}
 	}
 	.hello {
+		.banner {
+			background:$red3;
+			.mail {
+				display:none;
+			}
+			h2 {
+				font-size:42px;
+			}
+			p {
+				font-size:26px;
+			}
+		}
 		form {
 			width:auto;
 			input {
 				width:100%;
 				margin:0 0 20px 0;
 				float:none;
+			}
+			textarea {
+				margin-bottom:20px;
 			}
 			.last {
 				input.send {

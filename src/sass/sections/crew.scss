@@ -33,6 +33,12 @@
 			width:inherit;
 			position:relative;
 			overflow: hidden;
+			li {
+				width:100%;
+				img {
+					width:100%;
+				}
+			}
 		}
 		.texts {
 			text-align:center;
