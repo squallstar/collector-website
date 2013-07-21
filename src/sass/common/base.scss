@@ -28,6 +28,11 @@ button:focus {
     outline: none;
 }
 
+input {
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
 .container {
 	margin: 0px auto;
 	max-width: 1080px;
