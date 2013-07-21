@@ -114,7 +114,6 @@ $(document).ready ->
 
       form.toggleClass 'hidden'
       person.find('.contact-form-image').fadeToggle 250, () ->
-        console.log $(this).css('display')
         do form.find('input[name="email"]').focus if !form.hasClass('hidden')
       el.toggleClass 'active'
 
@@ -147,7 +146,7 @@ $(document).ready ->
           success: () ->
             main.html '<strong>Great! Your message has been sent to ' + person + '!<br /><br />Thank you</strong>'
             setTimeout () ->
-              console.log form.closest('.person')
+              do $(".person[data-person='#{recipient}'] .mail").click
             , 2000
 
           error: (xhr, text_status, error_thrown) ->
