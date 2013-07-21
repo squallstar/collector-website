@@ -24,6 +24,7 @@
     top:50px;
     position:absolute;
     z-index:2;
+    text-align:left;
   }
   .download-button {
     background:url(../img/download-button.png) no-repeat;
@@ -42,8 +43,8 @@
 }
 
 .mobile-carousel {
-  height:399px;
-  background:url(../img/teaser-mobile.jpg) no-repeat center center #69ceae;
+  height:400px;
+  background:url(../img/teaser-mobile.gif) no-repeat center center #69ceae;
   position:relative;
   .mobile-menu {
     position:absolute;
