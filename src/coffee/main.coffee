@@ -145,7 +145,7 @@ $(document).ready ->
           }
 
           success: () ->
-            main.text 'Your message has been sent to ' + person + '!'
+            main.html '<strong>Your message has been sent to ' + person + '!</strong>'
 
           error: (xhr, text_status, error_thrown) ->
             response = $.parseJSON xhr.responseText

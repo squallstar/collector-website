@@ -122,6 +122,21 @@
 			&.hidden {
 				top:400px;
 			}
+			.response {
+				padding:20px 30px;
+				font-size:16px;
+				line-height:23px;
+				text-align: left;
+				font-family:'Proxima Nova', 'Benton Sans', sans-serif;
+				color:#555;
+				font-weight:300;
+				strong {
+					font-weight:bold;
+					color:$red3;
+					font-size:18px;
+					line-height:26px;
+				}
+			}
 			.margin {
 				padding:17px 20px;
 				$grey-form-bg: #F3F3F3;
