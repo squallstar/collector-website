@@ -1,13 +1,20 @@
 # -----------------------------------------------------------------------
 # APP MAIN JS
 
+$ ->
+  html = $('html')
+  if navigator.userAgent.match(/iPad/i) != null
+    html.addClass 'ipad'
+    html.addClass 'window-' + $(document).width()
+    $('video').attr 'controls', 'true'
+
 $(document).ready ->
 
   endpoint = 'http://collectorwp.com/api/v1/'
 
   valid_email = (email) ->
     return String(email).match(/^\s*[\w\-\+_]+(?:\.[\w\-\+_]+)*\@[\w\-\+_]+\.[\w\-\+_]+(?:\.[\w‌​\-\+_]+)*\s*$/)
-  
+
   #1 LINKS
   $ ->
     $('.top-menu a, .mobile-menu a').click (e) ->
@@ -171,6 +178,7 @@ $(document).ready ->
   $ ->
     video = document.getElementsByTagName('video')[0];
     videoEnded = (e) ->
+      $('video').removeAttr 'controls'
       $('.carousel .container').fadeIn 500
 
     video.addEventListener 'ended', videoEnded, false
