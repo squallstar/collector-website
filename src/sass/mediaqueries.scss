@@ -111,6 +111,10 @@
 			margin-top:11px;
 		}
 	}
+	footer {
+		background:#838383;
+		color:#A2A2A2;
+	}
 	.carousel {
 		display:none;
 	}
@@ -140,9 +144,11 @@
 			}
 			h2 {
 				font-size:42px;
+				padding:0 20px;
 			}
 			p {
 				font-size:26px;
+				padding:0 20px;
 			}
 		}
 		form {
