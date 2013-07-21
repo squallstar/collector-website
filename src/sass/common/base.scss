@@ -28,7 +28,7 @@ button:focus {
     outline: none;
 }
 
-input {
+input, textarea {
     -webkit-appearance: none;
     border-radius: 0;
 }
@@ -91,7 +91,7 @@ header {
 		right:20px;
 		top:32px;
 		cursor:pointer;
-		&:hover, &:active, &.active {
+		&:hover, &.active {
 			@extend .i-menu-ui-active;
 		}
 	}

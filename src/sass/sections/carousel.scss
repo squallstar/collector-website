@@ -103,7 +103,7 @@
               @extend .i-menu-facebook;
             }
           }
-          &:hover {
+          &:hover, &:active {
             background:$red;
             &.about-us {
               span {
