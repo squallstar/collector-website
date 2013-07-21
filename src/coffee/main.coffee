@@ -150,7 +150,7 @@ $(document).ready ->
           error: (xhr, text_status, error_thrown) ->
             response = $.parseJSON xhr.responseText
             if response
-              main.text 'There was an error sending your message: ' + response.description
+              main.html '<strong>There was an error sending your message.</strong><br /><br />' + response.description
 
       false
 
