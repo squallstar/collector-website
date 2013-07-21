@@ -46,6 +46,10 @@
   height:400px;
   background:url(../img/teaser-mobile.gif) no-repeat center center #69ceae;
   position:relative;
+  > a {
+    display:block;
+    height:400px;
+  }
   .mobile-menu {
     position:absolute;
     display:none;

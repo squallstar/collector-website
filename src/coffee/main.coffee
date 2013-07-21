@@ -145,7 +145,10 @@ $(document).ready ->
           }
 
           success: () ->
-            main.html '<strong>Your message has been sent to ' + person + '!</strong>'
+            main.html '<strong>Great! Your message has been sent to ' + person + '!<br /><br />Thank you</strong>'
+            setTimeout () ->
+              console.log form.closest('.person')
+            , 2000
 
           error: (xhr, text_status, error_thrown) ->
             response = $.parseJSON xhr.responseText
