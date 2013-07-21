@@ -140,6 +140,16 @@
 				margin:0 0 20px 0;
 				float:none;
 			}
+			.last {
+				input.send {
+					float:none;
+					width:100%;
+					margin:0;
+				}
+				.counter {
+					display:none;
+				}
+			}
 		}
 	}
 }
