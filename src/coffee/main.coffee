@@ -17,7 +17,7 @@ $(document).ready ->
       targetid = $(this).attr('href')
       target = $(targetid).offset()
 
-      $('.mobile-menu').slideUp 500
+      $('.mobile-menu').slideUp 400
       $('.mobile-menu-activator').removeClass 'active'
 
       $("html,body").animate
@@ -179,4 +179,4 @@ $(document).ready ->
     $('.mobile-menu-activator').click () ->
       el = $ this
       el.toggleClass 'active'
-      menu.slideToggle 500
+      menu.slideToggle 200
