@@ -89,6 +89,12 @@
 	}
 }
 
+@media (min-width:481px) {
+	.mobile-menu {
+		display:none !important;
+	}
+}
+
 @media (max-width:480px) {
 	.mobile-only, .tablet-mobile-only {
 		display:block;
