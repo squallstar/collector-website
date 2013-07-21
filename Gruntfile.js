@@ -20,6 +20,7 @@ module.exports = function(grunt) {
 
     clean: {
       all: ['.sass-cache', 'build'],
+      before_deploying: ['build/index.html'],
       post_build: ['.sass-cache', 'npm-debug.log', 'build/.tmp']
     },
 
@@ -64,8 +65,6 @@ module.exports = function(grunt) {
           {expand: true, cwd: 'src/video/', src: ['**'], dest: 'build/video/'}
         ]
       },
-
-      /* Of course this is just temporary stuff */
       deploy: {
         files: [
           {expand: true, cwd: 'build/', src: ['**'], dest: '<%= deployPath %>'}
@@ -83,7 +82,17 @@ module.exports = function(grunt) {
         files: [
           {src: ['src/index.html'], dest: 'build/index.html'}
         ]
-      }
+      },
+      deploy: {
+        options: {
+          variables: {
+            'timestamp': '<%= new Date().getTime() %>'
+          }
+        },
+        files: [
+          {src: ['src/index.html'], dest: 'build/index.php'}
+        ]
+      },
     },
 
     sprite: {
@@ -154,7 +163,7 @@ module.exports = function(grunt) {
     'sass:development',
     'coffee',
     'concat',
-    'replace',
+    'replace:dist',
     'clean:post_build'
   ]);
 
@@ -165,7 +174,7 @@ module.exports = function(grunt) {
     'sass:release',
     'coffee',
     'concat',
-    'replace',
+    'replace:dist',
     'clean:post_build',
     'uglify:release'
   ]);
@@ -177,7 +186,7 @@ module.exports = function(grunt) {
         return false;
       }
       grunt.config.set('deployPath', where);
-      grunt.task.run(['build:release', 'copy:deploy', 'clean:all']);
+      grunt.task.run(['build:release', 'replace:deploy', 'clean:before_deploying', 'copy:deploy', 'clean:all']);
     }
   );
 
