@@ -56,6 +56,14 @@
 	}
 }
 
+@media (max-width: 815px) {
+	.hello {
+		form {
+			width:auto;
+		}
+	}
+}
+
 @media (max-width: 767px) {
 	.tablet-mobile-only {
 		display:block;
