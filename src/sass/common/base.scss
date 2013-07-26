@@ -33,6 +33,15 @@ input, textarea {
     border-radius: 0;
 }
 
+.awwwards {
+	@extend .i-awwwards;
+	display:block;
+	position:absolute;
+	top:265px;
+	left:0;
+	z-index:1000;
+}
+
 .container {
 	margin: 0px auto;
 	max-width: 1080px;
