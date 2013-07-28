@@ -100,7 +100,7 @@ module.exports = function(grunt) {
             src: ['src/sprite/*.png'],
             destImg: 'build/img/sprite.png',
             destCSS: 'src/sass/common/sprite.scss',
-            imgPath: '../img/sprite.png',
+            imgPath: '../img/sprite.png?v=<%= new Date().getTime() %>',
             algorithm: 'left-right',
             engine: 'gm',
             'engineOpts': {
